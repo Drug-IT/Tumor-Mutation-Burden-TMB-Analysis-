@@ -1,0 +1,92 @@
+# Genomics data files (large/binary)
+*.bam
+*.bam.bai
+*.bai
+*.sam
+*.cram
+*.crai
+*.vcf
+*.vcf.gz
+*.vcf.gz.tbi
+*.bcf
+*.bcf.csi
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.fa
+*.fasta
+*.fa.fai
+*.fasta.fai
+*.dict
+*.bed
+*.bed.gz
+*.bed.gz.tbi
+*.gff
+*.gff.gz
+*.gtf
+*.gtf.gz
+
+# Reference genomes and indices
+*.fa.*
+*.fasta.*
+hg19/
+hg38/
+GRCh37/
+GRCh38/
+
+# Database files
+humandb/
+snpEff_data/
+*.jar
+
+# ANNOVAR files
+*.avinput
+*_multianno.csv
+*_multianno.txt
+
+# Large result files - Allow specific files but exclude patterns
+*.png
+*.pdf
+results/figures/
+
+# R files
+.RData
+.Rhistory
+.Rproj.user/
+*.Rproj
+*.rds
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Large excluded files directory
+.gitignore_excluded/
