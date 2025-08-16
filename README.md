@@ -37,8 +37,10 @@ chmod +x scripts/install_requirements.sh
 Run Pipeline
 bash# 1. Alignment (interactive GUI)
 Rscript scripts/bwa_alignment_gui.R
+```
 
-# 2. Full TMB analysis from VCF
+## Full TMB analysis from VCF
+```
 Rscript scripts/tmb_pipeline.R
 📁 Project Structure
 ├── scripts/                    # All executable scripts
@@ -56,62 +58,83 @@ Rscript scripts/tmb_pipeline.R
 │   └── reports/               # HTML reports and summaries
 ├── requirements.txt           # Python dependencies
 └── README.md                  # This file
-🧬 Sample Analysis
-Validation Sample: SRR26456208 (cutaneous melanoma WES)
-Reference Genome: hg38
-TMB Result: Calculated with VAF correction and somatic filtering
-📊 Key Features
-Advanced VAF Correction
+
+```
+## Sample Analysis
+**Validation Sample:** SRR26456208 (cutaneous melanoma WES)
+
+**Reference Genome:** hg38
+
+**TMB Result:** Calculated with VAF correction and somatic filtering
+
+## Key Features
+#### Advanced VAF Correction
 
 Corrects unreliable VCF AF values using FORMAT/AD depths
+
 Ensures biologically sound VAF filtering (10-90%)
 
 Melanoma-Specific Analysis
 
 UV signature detection (C>T transitions)
+
 Melanoma-appropriate TMB thresholds
+
 Specialized somatic variant filtering
 
-Quality Control
+## Quality Control
 
 Comprehensive filtering metrics
+
 Coverage and quality distribution analysis
+
 Population frequency validation
 
-🔧 Configuration
+## Configuration
+```
 Edit the configuration block in scripts/tmb_pipeline.R:
 rSAMPLE_ID <- "your_sample_id"
 VCF_FILE  <- "path/to/normalized.vcf"
 ANNOVAR_DIR <- "path/to/annovar"
 BUILD <- "hg38"
-📈 Results
+```
+
+## Results
 The pipeline generates:
 
-TMB Score: Mutations per megabase with confidence intervals
-Filtered Variants: High-quality somatic mutations table
-QC Plots: VAF distributions, filtering waterfalls, mutation signatures
-Comprehensive Report: Detailed analysis summary
+**TMB Score:** Mutations per megabase with confidence intervals
 
-🧪 Validation
+**Filtered Variants:** High-quality somatic mutations table
+
+**QC Plots:** VAF distributions, filtering waterfalls, mutation signatures
+
+**Comprehensive Report:** Detailed analysis summary
+
+## Validation
 Validated on melanoma WES data with:
 
 ✅ VAF parsing accuracy verification
+
 ✅ Population frequency filtering validation
+
 ✅ UV signature confirmation for melanoma samples
+
 ✅ TMB concordance with expected ranges
 
-📝 Citation
+## Citation
 If you use this pipeline, please cite:
 TMB Analysis Pipeline for Cutaneous Melanoma
 Dorra Dhibi, Drug-IT Startup
 https://github.com/Drug-IT/Tumor-Mutation-Burden-TMB-Analysis-
-👤 Author
+
+## Author
 Dorra Dhibi
 Drug-IT Startup
 📧 Contact: GitHub Issues
 📄 License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
-📞 Support
+
 For questions or issues, please open a GitHub issue or contact Drug-IT startup.
